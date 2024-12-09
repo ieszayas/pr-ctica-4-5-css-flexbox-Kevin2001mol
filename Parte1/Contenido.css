@@ -1,0 +1,39 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap; /* Permite el ajuste para pantallas pequeñas */
+    max-width: 1200px;
+    gap: 10px; /* Espaciado entre elementos */
+}
+
+header, nav, article, aside, footer {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.header, .footer {
+    background-color: #f9d79c;
+    flex: 100%; /* Ocupa toda la fila */
+}
+
+.nav, .aside {
+    background-color: #c7c6f1;
+    flex: 15%; /* Columnas estrechas por defecto */
+}
+
+.article {
+    background-color: #d3dc91;
+    flex: 60%; /* Columna más amplia */
+}
+
+
+@media (max-width: 640px) {
+    .header, .nav, .article, .aside, .footer {
+        flex: 100%;
+    }
+}
