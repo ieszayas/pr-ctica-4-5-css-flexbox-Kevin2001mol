@@ -1,0 +1,67 @@
+/* Estilo general */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #ddd;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Contenedor de la galería */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap; /* Ajusta las filas automáticamente */
+    justify-content: space-between; /* Espacio uniforme entre elementos */
+    gap: 10px; /* Espaciado entre las imágenes */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el contenedor en la página */
+}
+
+/* Elementos de la galería */
+.gallery-item {
+    flex: 1 1 calc(33.33% - 10px); /* Tres imágenes por fila */
+    max-width: calc(33.33% - 10px);
+    box-sizing: border-box;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Hover: Agranda ligeramente la imagen */
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* Responsividad */
+@media (max-width: 2024px) {
+    .gallery-item {
+        flex: 1 1 calc(50% - 10px); /* Dos imágenes por fila */
+        max-width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 640px) {
+    .gallery-item {
+        flex: 1 1 100%; /* Una imagen por fila */
+        max-width: 100%;
+    }
+}
