@@ -12,43 +12,63 @@
     </header> 
     <main class="galeria">
         <div>
-            <a href="https://www.tomorrowland.com/home/" target="_blank">
+           
+            <img src="https://loremflickr.com/320/240" alt="Imagen aleatoria">
+            
+        </div>
+        <div>
+            
+            <img src="https://picsum.photos/300" alt="Imagen aleatoria">
+            
+        </div>
+        <div>
+           
                 <img src="https://loremflickr.com/320/240" alt="Imagen aleatoria">
-            </a>
+            
         </div>
         <div>
-            <a href="https://fabrikclub.com/" target="_blank">
+            
                 <img src="https://picsum.photos/300" alt="Imagen aleatoria">
-            </a>
+            
         </div>
         <div>
-            <a href="https://www.coca-cola.com/es/es/offerings/musica" target="_blank">
+            
                 <img src="https://loremflickr.com/320/240" alt="Imagen aleatoria">
-            </a>
+            
         </div>
         <div>
-            <a href="https://www.arenalsound.com/" target="_blank">
+            
                 <img src="https://picsum.photos/300" alt="Imagen aleatoria">
-            </a>
+           
         </div>
         <div>
-            <a href="https://aquasella.com/" target="_blank">
+           
                 <img src="https://loremflickr.com/320/240" alt="Imagen aleatoria">
-            </a>
+           
         </div>
         <div>
-            <a href="https://www.electricforest.com/" target="_blank">
+            
                 <img src="https://picsum.photos/300" alt="Imagen aleatoria">
-            </a>
-        </div>
-        <div>
-            <a href="https://www.spain.info/es/agenda/primavera-sound/" target="_blank">
-                <img src="https://loremflickr.com/320/240" alt="Imagen aleatoria">
-            </a>
-        </div>
-        <div>
-            <a href="https://www.spain.info/es/agenda/sonar-festival-internacional-musica-avanzada-barcelona/" target="_blank">
-                <img src="https://picsum.photos/300" alt="Imagen aleatoria">
-    
+                <div class="fullscreen">
+                    <img src="" alt="Imagen ampliada">
+                </div>
+                <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                        const fullscreenDiv = document.querySelector('.fullscreen');
+                        const fullscreenImg = fullscreenDiv.querySelector('img');
+                        const galleryImages = document.querySelectorAll('.galeria img');
+            
+                        galleryImages.forEach(img => {
+                            img.addEventListener('click', () => {
+                                fullscreenImg.src = img.src;
+                                fullscreenDiv.style.display = 'flex';
+                            });
+                        });
+            
+                        fullscreenDiv.addEventListener('click', () => {
+                            fullscreenDiv.style.display = 'none';
+                        });
+                    });
+                </script>
 </body>
 </html>
