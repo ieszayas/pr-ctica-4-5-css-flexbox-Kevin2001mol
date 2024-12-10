@@ -1,39 +1,56 @@
-/* Estilos generales */
-body {
+
+html, body { /*si o pongo html no me ocupa toda la pantalla*/
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
     font-family: Arial, sans-serif;
+    box-sizing: border-box; /* Para incluir padding y bordes en el tamaño total */
 }
 
 .container {
-    margin: auto;
-    display: flex;
+    display: flex; /*se hace flexible para que se puedan alinear elementos y 
+    en este caso esta funcionando como el width( al ser el width de 100, estas diciendo con el 
+    flex, dentro de est ancho que este elemento ocupe este porcentaje del mismo) */
     flex-wrap: wrap; /* Permite el ajuste para pantallas pequeñas */
-    max-width: 1200px;
-    gap: 10px; /* Espaciado entre elementos */
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box; /* hace que los bordes no desborden el contenedor */
 }
 
 header, nav, article, aside, footer {
     padding: 10px;
-    box-sizing: border-box;
+    box-sizing: border-box; 
+    border: 1px solid whitesmoke; 
+    border-radius: 5px;
+    margin: 0; 
 }
+
 
 .header, .footer {
-    background-color: #f9d79c;
-    flex: 100%; /* Ocupa toda la fila */
+    background-color: #FFCB01;
+    flex: 100%;
+    height: 10%; /* hace que los demas contenedores ocupen el 80%*/
 }
+
 
 .nav, .aside {
-    background-color: #c7c6f1;
-    flex: 15%; /* Columnas estrechas por defecto */
+    background-color: #32AA02;
+    flex: 15%; 
+    height: 80%; /* deja el 20% al header y footer */
 }
+
 
 .article {
-    background-color: #d3dc91;
-    flex: 60%; /* Columna más amplia */
+    background-color: #FFFFFF;
+    flex: 60%;
+    height: 80%;
 }
 
-
+/* Responsividad para pantallas pequeñas */
 @media (max-width: 640px) {
     .header, .nav, .article, .aside, .footer {
         flex: 100%;
+        height: auto; /* Ajusta dinámicamente la altura */
     }
 }
