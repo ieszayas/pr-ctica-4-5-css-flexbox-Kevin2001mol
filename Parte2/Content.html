@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Responsive Flexbox</title>
+    <link rel="stylesheet" href="Content.css">
+</head>
+<body>
+    <header>
+        <h1>Responsive Gallery</h1>
+    </header> 
+    <main class="galeria">
+        <div>
+           
+            <img src="https://loremflickr.com/320/240" alt="Imagen aleatoria">
+            
+        </div>
+        <div>
+            
+            <img src="https://loremflickr.com/321/240" alt="Imagen aleatoria">
+            
+        </div>
+        <div>
+           
+                <img src="https://loremflickr.com/323/240" alt="Imagen aleatoria">
+            
+        </div>
+        <div>
+            
+                <img src="https://loremflickr.com/324/240" alt="Imagen aleatoria">
+            
+        </div>
+        <div>
+            
+                <img src="https://loremflickr.com/325/240" alt="Imagen aleatoria">
+            
+        </div>
+        <div>
+            
+                <img src="https://loremflickr.com/326/240" alt="Imagen aleatoria">
+           
+        </div>
+        <div>
+           
+                <img src="https://loremflickr.com/327/240" alt="Imagen aleatoria">
+           
+        </div>
+        <div>
+            
+                <img src="https://loremflickr.com/328/240" alt="Imagen aleatoria">
+                <div class="fullscreen">
+                    <img src="" alt="Imagen ampliada">
+                </div>
+                <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                        const fullscreenDiv = document.querySelector('.fullscreen');
+                        const fullscreenImg = fullscreenDiv.querySelector('img');
+                        const galleryImages = document.querySelectorAll('.galeria img');
+            
+                        galleryImages.forEach(img => {
+                            img.addEventListener('click', () => {
+                                fullscreenImg.src = img.src;
+                                fullscreenDiv.style.display = 'flex';
+                            });
+                        });
+            
+                        fullscreenDiv.addEventListener('click', () => {
+                            fullscreenDiv.style.display = 'none';
+                        });
+                    });
+                </script>
+</body>
+</html>
