@@ -30,7 +30,6 @@ h1 {
 
 div {
     flex: 1 1 calc(25% - 10px); /* Tres imágenes por fila con espacio incluido */
-    /*box-sizing: border-box;Calcula el ancho */
     border: 2px solid #020202;
     border-radius: 10px;
     overflow: hidden;
