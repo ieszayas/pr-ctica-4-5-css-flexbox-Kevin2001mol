@@ -36,10 +36,10 @@ div {
     background: #00ccff;
 }
 
-div a img {
+div img {
     width: 100%;
     height: auto;
-    display: block;
+    display: block;   
 }
 
 @media (max-width: 1724px) {
